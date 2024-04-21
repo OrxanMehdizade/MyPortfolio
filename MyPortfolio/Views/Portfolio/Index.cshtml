@@ -1,0 +1,144 @@
+﻿@model ContactMessage
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+            header h1 {
+                font-size: 36px;
+                margin: 10px 0;
+            }
+
+            header h6 {
+                font-size: 18px;
+                color: #6c757d;
+                margin-bottom: 30px;
+            }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+            ul li {
+                margin-bottom: 10px;
+            }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        form input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+            form input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hello, my name is Orkhan</h1>
+        <h6>As a Full Stack Developer, I have experience in both front-end and back-end technologies, allowing me to build dynamic and responsive web applications.</h6>
+    </header>
+
+    <div class="container">
+        <h2>Skills</h2>
+        <ul>
+            <li>Front-end Development:</li>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3, SASS/SCSS</li>
+                <li>JavaScript (ES6+)</li>
+                <li>React.js</li>
+                <li>Bootstrap, Materialize CSS</li>
+            </ul>
+            <li>Back-end Development:</li>
+            <ul>
+                <li>C++, C# .NET, ASP.NET MVC/Core, Web/API</li>
+                <li>Node.js</li>
+                <li>Python, Django</li>
+                <li>RESTful API Design</li>
+                <li>Database Management (SQL Server, MsSQL)</li>
+            </ul>
+            <li>DevOps and Tools:</li>
+            <ul>
+                <li>Git, GitHub, GitLab</li>
+                <li>CI/CD pipelines (Azure DevOps)</li>
+                <li>Docker, Kubernetes</li>
+                <li>Azure, AWS, Google Cloud Platform</li>
+            </ul>
+            <li>Other Skills:</li>
+            <ul>
+                <li>Agile Methodologies (Scrum, Kanban)</li>
+                <li>Problem Solving and Debugging</li>
+                <li>Test-Driven Development (TDD)</li>
+                <li>UI/UX Design Principles</li>
+            </ul>
+        </ul>
+
+        <h2>Contact</h2>
+        @if (ViewBag.SuccessMessage != null)
+        {
+            <p>@ViewBag.SuccessMessage</p>
+        }
+        <form action="@Url.Action("Contact")" method="post">
+            <label for="Name">Name:</label>
+            <input type="text" id="Name" name="Name" required><br />
+            <label for="Email">Email:</label>
+            <input type="email" id="Email" name="Email" required><br />
+            <label for="Message">Message:</label>
+            <textarea id="Message" name="Message" rows="6" required></textarea><br />
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+</body>
+</html>
