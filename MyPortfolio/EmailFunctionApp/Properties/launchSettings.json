@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "EmailFunctionApp": {
-      "commandName": "Project",
-      "commandLineArgs": "--port 7201",
-      "launchBrowser": false
-    }
-  }
-}

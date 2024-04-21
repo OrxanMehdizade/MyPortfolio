@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyPortfolio.Models;
+using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace MyPortfolio.Controllers
 {
@@ -11,8 +13,16 @@ namespace MyPortfolio.Controllers
         public PortfolioController(IHttpClientFactory httpClientFactory)
         {
             _httpClient = httpClientFactory.CreateClient();
+            _httpClient.BaseAddress = new Uri("http://localhost:7101/");
         }
+
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Contact()
         {
             return View();
         }
@@ -24,28 +34,28 @@ namespace MyPortfolio.Controllers
             {
                 try
                 {
-                    HttpResponseMessage response = await _httpClient.PostAsJsonAsync("Azure_Function_URL", message);
+                    
+                    HttpResponseMessage response = await _httpClient.PostAsJsonAsync("api/SendEmail/", message);
                     if (response.IsSuccessStatusCode)
                     {
-                        TempData["SuccessMessage"] = "Your message has been sent successfully!";
+                        ViewBag.SuccessMessage = "Your message has been sent successfully!";
                     }
                     else
                     {
-                        TempData["ErrorMessage"] = "Failed to send message. Please try again later.";
+                        ViewBag.ErrorMessage = "Failed to send message. Please try again later.";
                     }
                 }
                 catch (Exception ex)
                 {
-                    TempData["ErrorMessage"] = $"An error occurred: {ex.Message}";
+                    ViewBag.ErrorMessage = $"An error occurred: {ex.Message}";
                 }
             }
             else
             {
-                TempData["ErrorMessage"] = "Please provide valid information in all fields.";
+                ViewBag.ErrorMessage = "Please provide valid information in all fields.";
             }
 
             return RedirectToAction("Index");
         }
     }
-}
 }
