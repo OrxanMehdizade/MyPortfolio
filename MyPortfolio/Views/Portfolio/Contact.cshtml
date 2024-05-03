@@ -1,18 +1,3 @@
-﻿@model ContactMessage
+﻿
 
 
-
-
-<form asp-controller="Portfolio" asp-action="Contact" method="post" class="form-add-main">
-    <div class="form-group">
-        <input asp-for="ContactName" placeholder="Name..." class="form-control" />
-        <span asp-validation-for="ContactName" class="text-danger"></span>
-        <input asp-for="ContactEmail" placeholder="Email..." class="form-control" />
-        <span asp-validation-for="ContactEmail" class="text-danger"></span>
-        <input asp-for="contactMessage" placeholder="Price..." class="form-control" />
-        <span asp-validation-for="contactMessage" class="text-danger"></span>
-        <div class="btnStyle">
-            <button type="submit" class="btn btn-primary">Send Messages</button>
-        </div>
-    </div>
-</form>

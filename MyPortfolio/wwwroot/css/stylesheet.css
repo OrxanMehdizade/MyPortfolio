@@ -2,6 +2,7 @@
     margin: 0;
     padding:0;
     box-sizing:border-box;
+    scroll-behavior:smooth;
     font-family:'poppins',sans-serif;
 }
 
@@ -223,8 +224,8 @@ body{
     background-color: transparent;
     padding: 40px;
     font-size: 13px; 
-    font-weight: normal;
-    border-right: 10px solid transparent; 
+    font-weight: 13px;
+    border-right: 10px; 
     border-radius: 20px;
     transition: background 0.5s, transform 0.5s;
     box-shadow: 1px 1px 20px #012290f7,
@@ -274,29 +275,28 @@ body{
 }
 
 /**************************************************************/
-
 section{
-    display:flex;
-    flex-wrap:wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .container1{
-    width:600px;
-    height:500px;
-    padding:75px 90px;
-    margin-left:120px;
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
 }
 
 .heading1{
-    text-align:center;
-    text-decoration:underline;
-    text-underline-offset:10px;
-    text-decoration-thickness:5px;
-    margin-bottom:50px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
 }
 
 
-.bar {
+.bar{
     font-size: 23px;
 }
 .Technical-bars .bar {
@@ -318,15 +318,23 @@ section{
     opacity: 0;
 
 }
-.Technical-bars .bar .progress-line {
+
+
+.Technical-bars .bar .progress-line{
         position: relative;
         border-radius: 10px;
         width: 100%;
         height: 5px;
-        background-color: #000000;
-        animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
+        background-color: #000;
+        animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
         transform: scaleX(0);
         transform-origin: left;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
 }
 
 .Technical-bars .bar .progress-line span{
@@ -334,7 +342,7 @@ section{
     background-color: #0ef;
     position: absolute;
     border-radius: 10px;
-    animation: animate 1s 1s cubic-bezier(1,0,0,5,1) forwards;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
     transform: scaleX(0);
     transform-origin: left;
 }
@@ -344,23 +352,28 @@ section{
 
 
 
-.progress-line.html span {
+
+
+.progress-line.html span{
     width: 90%;
 }
 
-.progress-line.css span {
+.progress-line.css span{
     width: 80%;
 }
 
-.progress-line.javascript span {
+.progress-line.cpp span {
+    width: 80%;
+}
+.progress-line.Javascript span{
     width: 90%;
 }
 
-.progress-line.python span {
+.progress-line.python span{
     width: 60%;
 }
 
-.progress-line.react span {
+.progress-line.react span{
     width: 70%;
 }
 
@@ -368,47 +381,247 @@ section{
     width: 50%;
 }
 
-.progress-line.nodejs span {
+.progress-line.nodejs span{
     width: 75%;
 }
 
-.progress-line.restapi span {
+.progress-line.restapi span{
     width: 65%;
 }
-
-.progress-line.database span {
+.progress-line.bootstrap span {
+    width: 65%;
+}
+.progress-line.database span{
     width: 70%;
 }
 
-.progress-line.git span {
+.progress-line.git span{
     width: 75%;
 }
 
-.progress-line.docker span {
+.progress-line.docker span{
     width: 60%;
 }
 
-.progress-line.cloud span {
+.progress-line.cloud span{
     width: 70%;
 }
 
-.progress-line.agile span {
+.progress-line.agile span{
     width: 80%;
 }
 
-.progress-line.problem-solving span {
+.progress-line.problem-solving span{
     width: 85%;
 }
 
-.progress-line.tdd span {
+.progress-line.tdd span{
     width: 70%;
 }
 
-@keyframes animate {
-    100% {
-        transform: scaleX(1);
+.progress-line span::after{
+    position:absolute;
+    padding:1px 8px;
+    background-color:#000;
+    color:#fff;
+    font-size:12px;
+    border-radius:3px;
+    top:-28px;
+    right:-20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity:0;
+}
+
+.progress-line.html span::after {
+    content: "90%";
+}
+
+.progress-line.css span::after {
+    content: "80%";
+}
+
+.progress-line.cpp span::after {
+    content: "80%";
+}
+
+.progress-line.Javascript span::after {
+    content: "90%";
+}
+
+.progress-line.python span::after {
+    content: "60%";
+}
+
+.progress-line.react span::after {
+    content: "70%";
+}
+
+.progress-line.csharp span::after {
+    content: "50%";
+}
+
+.progress-line.nodejs span::after {
+    content: "75%";
+}
+
+.progress-line.restapi span::after {
+    content: "65%";
+}
+
+.progress-line.bootstrap span::after {
+    content: "65%";
+}
+
+.progress-line.database span::after {
+    content: "70%";
+}
+
+.progress-line.git span::after {
+    content: "75%";
+}
+
+.progress-line.docker span::after {
+    content: "60%";
+}
+
+.progress-line.cloud span::after {
+    content: "70%";
+}
+
+.progress-line.agile span::after {
+    content: "80%";
+}
+
+.progress-line.problem-solving span::after {
+    content: "85%";
+}
+
+.progress-line.tdd span::after {
+    content: "70%";
+}
+
+.progress-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width:0px;
+    border-right-width:0px;
+    border-top-color:#000;
+    top:-10px;
+    right:0;
+    animation:showText 0.5s 1.5s linear forwards;
+    opacity:0;
+
+}
+
+@keyframes showText{
+    100%{
+        opacity:1;
     }
 }
+
+.radial-bars{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    align-items:flex-start;
+}
+.radial-bars .radial-bar{
+    width:50%;
+    height:170px;
+    margin-bottom:10px;
+    position:relative
+}
+.radial-bars .radial-bar svg{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-90deg);
+    width:120px;
+    height:160px;
+}
+
+.radial-bars .radial-bar progress-bar{
+    stroke-width:10;
+    stop-color:black;
+    fill:transparent;
+    stroke-dasharray:502;
+    stroke-dashoffset:502;
+    stroke-linecap:round;
+    animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset:-1;
+    }
+}
+
+.path {
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path-1{ animation:animate-path1 1s 1s linear forwards}
+.path-2{ animation:animate-path2 1s 1s linear forwards}
+.path-3{ animation:animate-path3 1s 1s linear forwards}
+.path-4{ animation:animate-path4 1s 1s linear forwards}
+
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: 50;
+    }
+}
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: 175;
+    }
+}
+
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: 125;
+    }
+}
+
+@keyframes animate-path4 {
+    100% {
+        stroke-dashoffset: 75;
+    }
+}
+
+
+.radial-bar .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size:17px;
+    font-weight:500;
+    animation:showText 0.5s 1s linear forwards;
+    opacity:0;
+}
+
+.radial-bar .text{
+    width:100%;
+    position:absolute;
+    text-align:center;
+    left:50%;
+    bottom:-5px;
+    transform:translateX(-50px);
+    font-size:9px;
+    font-weight:500;
+    animation:showText 0.5s 1s linear forwards;
+    opacity:0;
+}
+
 
 /**************************************************************/
 
@@ -464,3 +677,238 @@ section{
     }
     /**************************************************************/
 
+
+
+.main-text{
+    padding-top:130px;
+    margin-top:200px;
+}
+
+.main-text h2{
+    font-size:60px;
+    line-height:1;
+    text-align:center;
+}
+.main-text h2 span{
+    color:#0ef;
+}
+
+.portfolio-content{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(359px, auto));
+}
+
+.row{
+    position:relative;
+    overflow:hidden;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.row img{
+    width:100%;
+    border-radius:8px;
+    display:block;
+    transition:transform 0.5s;
+}
+
+.layer{
+    width:100%;
+    height:0;
+    background:linear-gradient(rgba(0,0,0,0.1),#0ef);
+    position:absolute;
+    border-radius:8px;
+    left:0;
+    bottom:0;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:0 40px;
+    transition:height 0.5s;
+}
+
+.layer h5{
+    color: #000;
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.layer p{
+    color:#000;
+    font-size:1rem;
+    line-height:1.8;
+}
+
+.layer i{
+    color:#ff004f;
+    margin-top:20px;
+    font-size:20px;
+    background:#fff;
+    width:60px;
+    height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+}
+
+.row:hover img{
+    transform:scale(1.1);
+
+}
+
+.row:hover .layer{
+    height:100%;
+}
+
+.contact{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    align-items:center;
+    gap:3rem;
+    padding-left:30px;
+    margin-top:130px;
+}
+
+.contact-text h2{
+    font-size:90px;
+    line-height:1;
+    text-align:center;
+} 
+
+.contact-text h2 span{
+    color:#0ef;
+}
+
+.contact-text h4{
+    margin: 15px 0;
+    color:rgb(228,228,288);
+    font-size:20px;
+    font-weight:600;
+}
+
+.contact-text p {
+    color: rgb(177,177,177);
+    font-size:20px;
+    line-height:30px;
+    margin-bottom:2rem;
+}
+
+.contact-list{
+    margin-bottom:3rem;
+
+}
+
+.contact-list li{
+    margin-bottom:10px;
+    display:block;
+}
+
+.contact-list i{
+    display:inline-block;
+    color:#0ef;
+    font-size:20px;
+    font-weight:600;
+    transition:all .40s ease;
+}
+
+.contact-list li a:hover{
+    transform:scale(1.01) translateY(-5px);
+    color:#0ef;
+}
+
+.contact-icons i{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:40px;
+    height:40px;
+    background: transparent;
+    border:2px solid #0ef;
+    border-radius:50%;
+    font-size:20px;
+    color:#0ef;
+    text-decoration:none;
+    margin:30px 15px 30px 0;
+    transition: .5s ease;
+    opacity:0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay:calc(.2s * var(--i));
+}
+
+
+.contact-icons i:hover{
+    background: #0ef;
+    color: #000;
+    box-shadow: 0 0 20px #0ef;
+}
+
+
+.contact-form form{
+    position:relative;
+}
+
+.contact-form form input,form textarea{
+    border:none;
+    outline:none;
+    width:90%;
+    padding:18px;
+    background:#555557;
+    color:#000;
+    font-size:1rem;
+    font-weight:600;
+    margin-bottom:0.5rem;
+    border-radius:0.5rem;
+}
+
+.contact-form textarea{
+    resize:none;
+    height:220px;
+}
+
+.contact-form form .send {
+    display: inline-block;
+    padding: 14px 60px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 18px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,0 0 25px #0ef,
+}
+
+.contact-form form .send:hover{
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+} 
+
+.last-text p{
+    width:100%;
+    text-align:center;
+    padding:25px 0;
+    background:rgb(7,85,91);
+    font-weight:300;
+    margin-top:70px;
+}
+
+.top{
+    position:fixed;
+    bottom:2.1rem;
+    right:2.1rem;
+}
+
+.top i{
+    color:#000;
+    background:#0ef;
+    font-size:20px;
+    padding:20px;
+    border-radius:0.5rem;
+}

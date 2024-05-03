@@ -1,4 +1,6 @@
-﻿@{
+﻿@model ContactMessage
+
+@{
     Layout = null;
 }
 
@@ -17,11 +19,11 @@
     <header class="header">
         <a href="#" class="logo">Portfolio</a>
         <nav class="navbar">
-            <a href="#" style="--i:1" class="active" >Home</a>
-            <a href="#" style="--i:2" >About</a>
-            <a href="#" style="--i:3" >Skill</a>
-            <a href="#" style="--i:4" >Portfolio</a>
-            <a href="#" style="--i:5" >Contact</a>
+            <a href="#home" style="--i:1" class="active" >Home</a>
+            <a href="#about" style="--i:2" >About</a>
+            <a href="#services" style="--i:3" >Skill</a>
+            <a href="#skills" style="--i:4" >Portfolio</a>
+            <a href="#contact" style="--i:5" >Contact</a>
         </nav>
     </header>
     <section class="home">
@@ -98,9 +100,8 @@
         </div>
     </section>
     <h1 class="sub-title">My <span>Skills</span></h1>
-
     <section>
-        <div class="container1" id="Skills">
+        <div class="container1" id="skills">
             <h1 class="heading1">Technical Skills</h1>
             <div class="Technical-bars">
                 <div class="bar">
@@ -126,17 +127,16 @@
                 <div class="bar">
                     <i class='bx bxl-javascript' style="color:#b0bc1e"></i>
                     <div class="info">
-                        <span>JavaScript (ES6+)</span>
+                        <span>Javascript  (ES6+)</span>
                     </div>
-                    <div class="progress-line javascript">
+                    <div class="progress-line Javascript">
                         <span></span>
                     </div>
                 </div>
-
                 <div class="bar">
                     <i class='bx bxl-react' style="color:#61DAFB"></i>
                     <div class="info">
-                        <span>React.js</span>
+                        <span>React</span>
                     </div>
                     <div class="progress-line react">
                         <span></span>
@@ -224,7 +224,6 @@
                     </div>
                 </div>
 
-
                 <div class="bar">
                     <i class='bx bxl-docker' style="color:#2496ED"></i>
                     <div class="info">
@@ -274,51 +273,133 @@
                         <span></span>
                     </div>
                 </div>
+
             </div>
         </div>
 
         <div class="container1">
             <h1 class="heading1">Professional Skills</h1>
             <div class="radial-bars">
-                <svg x="0px" y="0px" viewBox="0 0 200 200">
-                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                </svg>
-                <div class="percentage">90%</div>
-                <div class="text">creativity</div>
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">90%</div>
+                    <div class="text">creativity</div>
+                </div>
+
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">65%</div>
+                    <div class="text">Communication</div>
+                </div>
+
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">75%</div>
+                    <div class="text">Problem Solving</div>
+                </div>
+
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">85%</div>
+                    <div class="text">TeamWork</div>
+                </div>
             </div>
 
-            <div class="radial-bars">
-                <svg x="0px" y="0px" viewBox="0 0 200 200">
-                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                </svg>
-                <div class="percentage">65%</div>
-                <div class="text">Communication</div>
-            </div>
-
-            <div class="radial-bars">
-                <svg x="0px" y="0px" viewBox="0 0 200 200">
-                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                </svg>
-                <div class="percentage">75%</div>
-                <div class="text">Problem Solving</div>
-            </div>
-
-            <div class="radial-bars">
-                <svg x="0px" y="0px" viewBox="0 0 200 200">
-                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                </svg>
-                <div class="percentage">85%</div>
-                <div class="text">TeamWork</div>
-            </div>
         </div>
-
     </section>
 
+    <section>
+        <div class="portfolio" id="project"> 
+            <div class="main-text" id="project">
+                <h2>Latest<span>Project</span></h2>
 
+                <div class="portfolio-content">
+                    <div class="row">
+                        <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_23-2149052117.jpg" />
+                        <div class="layer">
+                            <h5>UI/UX Design</h5>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
+                                scrambled it to make a type specimen book. It has</p>
+
+                            <a href="#"><i class='bx bx-link-external' style="color:aliceblue"></i></a>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <img src="https://img.freepik.com/free-vector/website-development-banner_33099-1687.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714608000&semt=ais" />
+                        <div class="layer">
+                            <h5>UI/UX Design</h5>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                                scrambled it to make a type specimen book. It has
+                            </p>
+
+                            <a href="#"><i class='bx bx-link-external' style="color:aliceblue"></i></a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>Contact <span>Me</span></h2>
+            <h4>Let's work Together</h4>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has
+            </p>
+            <div class="contact-list">
+                <li><i class="bx bxs-send"></i>mehdizadeorxan2000@gmail.com</li>
+                <li><i class="bx bxs-phone"></i>+994555479088</li>
+            </div>
+            <div class="contact-icons">
+                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+
+            <div class="contact-form">
+                <form asp-controller="Portfolio" asp-action="Contact" method="post" class="form-add-main">
+                    <div class="form-group">
+                        <input asp-for="ContactName" placeholder="Adınızı Girin" class="form-control" />
+                        <span asp-validation-for="ContactName" class="text-danger"></span>
+                        <input asp-for="ContactEmail" placeholder="E-posta Adresinizi Girin" class="form-control" />
+                        <span asp-validation-for="ContactEmail" class="text-danger"></span>
+                        <textarea asp-for="contactMessage" placeholder="Mesajınızı Girin" class="form-control"></textarea>
+                        <span asp-validation-for="contactMessage" class="text-danger"></span>
+                        <div class="btnStyle">
+                            <button type="submit" class="send">Mesaj Gönder</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="last-text">
+        <p>Made with love by Mehdizade Orkhan 2024</p>
+    </div>
+
+    <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
 
     <script src="~/js/portfolio.js"></script>
 ]
