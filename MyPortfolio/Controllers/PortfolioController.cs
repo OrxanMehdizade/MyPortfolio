@@ -21,11 +21,11 @@ namespace MyPortfolio.Controllers
             return View();
         }
 
-        [HttpGet]
-        public IActionResult Contact()
-        {
-            return View();
-        }
+        //[HttpGet]
+        //public IActionResult Contact()
+        //{
+        //    return View();
+        //}
 
         [HttpPost]
         public async Task<IActionResult> Contact(ContactMessage message)

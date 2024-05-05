@@ -155,7 +155,7 @@ body{
 
 .about{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2, 1fr);
     align-items:center;
     gap:1.5rem;
 }
@@ -197,7 +197,7 @@ body{
 
 
 
-#services {
+#services{
     color: aliceblue;
     font-size: 20px;
     line-height: 1.4;
@@ -275,7 +275,7 @@ body{
 }
 
 /**************************************************************/
-section{
+.ServicesSection{
     display: flex;
     flex-wrap: wrap;
 }
@@ -680,15 +680,16 @@ section{
 
 
 .main-text{
-    padding-top:130px;
+    padding-top:630px;
     margin-top:200px;
 }
 
-.main-text h2{
-    font-size:60px;
-    line-height:1;
-    text-align:center;
-}
+    .main-text h2 {
+        font-size: 60px;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
 .main-text h2 span{
     color:#0ef;
 }
@@ -888,15 +889,16 @@ section{
 
 .contact-form form .send:hover{
     box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
-} 
+}
+
 
 .last-text p{
-    width:100%;
-    text-align:center;
-    padding:25px 0;
-    background:rgb(7,85,91);
-    font-weight:300;
-    margin-top:70px;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: rgb(7,85,91);
+    font-weight: 300;
+    margin-top: 70px;
 }
 
 .top{

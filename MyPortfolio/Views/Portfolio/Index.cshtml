@@ -32,14 +32,13 @@
             <h3>And I'm a <span class="text"></span></h3>
             <h6>As a Full Stack Developer, I have experience in both front-end and back-end technologies, allowing me to build dynamic and responsive web applications.</h6>
             <div class="home-sci">
-                <a href="#" style="--i:7" ><i class='bx bxl-facebook'></i></a>
-                <a href="#" style="--i:8" ><i class='bx bxl-instagram'></i></a>
-                <a href="#" style="--i:9" ><i class='bx bxl-whatsapp'></i></a>
-                <a href="#" style="--i:10" ><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100008370672625" style="--i:7"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/orxan.m.zade?igsh=MXNkYnlnNGJ6amdnMw==" style="--i:8"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/in/orxan-mehdizade-a80101272/" style="--i:10"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://wa.me/994555479088" style="--i:9"><i class='bx bxl-whatsapp'></i></a>
             </div>
             <a href="#" class="btn-box">More About Me</a>
             </div>
-        </div>
 
     </section>
 
@@ -100,7 +99,8 @@
         </div>
     </section>
     <h1 class="sub-title">My <span>Skills</span></h1>
-    <section>
+    
+    <section class="ServicesSection">
         <div class="container1" id="skills">
             <h1 class="heading1">Technical Skills</h1>
             <div class="Technical-bars">
@@ -286,7 +286,7 @@
                         <circle class="path path-1" cx="100" cy="100" r="80"></circle>
                     </svg>
                     <div class="percentage">90%</div>
-                    <div class="text">creativity</div>
+                    <div class="text">Creativity</div>
                 </div>
 
                 <div class="radial-bar">
@@ -339,6 +339,20 @@
                     </div>
 
                     <div class="row">
+                        <img src="/images/MyDeskopt.jpg" />
+                        <div class="layer">
+                            <h5>UI/UX Design</h5>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                                scrambled it to make a type specimen book. It has
+                            </p>
+
+                            <a href="#"><i class='bx bx-link-external' style="color:aliceblue"></i></a>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
                         <img src="https://img.freepik.com/free-vector/website-development-banner_33099-1687.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714608000&semt=ais" />
                         <div class="layer">
                             <h5>UI/UX Design</h5>
@@ -366,37 +380,35 @@
                 scrambled it to make a type specimen book. It has
             </p>
             <div class="contact-list">
-                <li><i class="bx bxs-send"></i>mehdizadeorxan2000@gmail.com</li>
-                <li><i class="bx bxs-phone"></i>+994555479088</li>
+                <li><i class='bx bx-envelope'></i> mehdizadeorxan2000@gmail.com</li>
+                <li><i class="bx bxs-phone"></i> +994555479088</li>
             </div>
             <div class="contact-icons">
-                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100008370672625"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://www.instagram.com/orxan.m.zade?igsh=MXNkYnlnNGJ6amdnMw=="><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/in/orxan-mehdizade-a80101272/"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://wa.me/994555479088"><i class='bx bxl-whatsapp'></i></a>
             </div>
-
-            <div class="contact-form">
-                <form asp-controller="Portfolio" asp-action="Contact" method="post" class="form-add-main">
-                    <div class="form-group">
-                        <input asp-for="ContactName" placeholder="Adınızı Girin" class="form-control" />
-                        <span asp-validation-for="ContactName" class="text-danger"></span>
-                        <input asp-for="ContactEmail" placeholder="E-posta Adresinizi Girin" class="form-control" />
-                        <span asp-validation-for="ContactEmail" class="text-danger"></span>
-                        <textarea asp-for="contactMessage" placeholder="Mesajınızı Girin" class="form-control"></textarea>
-                        <span asp-validation-for="contactMessage" class="text-danger"></span>
-                        <div class="btnStyle">
-                            <button type="submit" class="send">Mesaj Gönder</button>
-                        </div>
+        </div>
+        <div class="contact-form">
+            <form asp-controller="Portfolio" asp-action="Contact" method="post" class="form-add-main">
+                <div class="form-group">
+                    <input asp-for="ContactName" placeholder="Adınızı Girin" class="form-control" />
+                    <span asp-validation-for="ContactName" class="text-danger"></span>
+                    <input asp-for="ContactEmail" placeholder="E-posta Adresinizi Girin" class="form-control" />
+                    <span asp-validation-for="ContactEmail" class="text-danger"></span>
+                    <textarea asp-for="contactMessage" placeholder="Mesajınızı Girin" class="form-control"></textarea>
+                    <span asp-validation-for="contactMessage" class="text-danger"></span>
+                    <div class="btnStyle">
+                        <button type="submit" class="send">Send Message</button>
                     </div>
-                </form>
-            </div>
-
+                </div>
+            </form>
         </div>
     </section>
 
     <div class="last-text">
-        <p>Made with love by Mehdizade Orkhan 2024</p>
+        <p>Made with love by Mehdizade Orkhan &#169; 2024</p>
     </div>
 
     <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
